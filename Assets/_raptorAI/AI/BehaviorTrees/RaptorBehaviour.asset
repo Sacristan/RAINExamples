@@ -19,16 +19,16 @@ MonoBehaviour:
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;chooseBehaviour&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;patrolIfEnemyNotDetected&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;player == null&quot;&gt;&lt;selector
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;detectForEnemiesDuringPatrol&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;detectEnemy&quot; matchtype=&quot;best&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;player == null&quot;&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      name=&quot;detectForEnemiesDuringPatrol&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;detectEnemy&quot; matchtype=&quot;best&quot;
       entityobjectvariable=&quot;player&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
       aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Player&amp;quot;&quot;
       /&gt;&lt;waypointpatrol waypointsetvariable=&quot;&amp;quot;Waypoint Network&amp;quot;&quot;
       waypointactiontype=&quot;patrol&quot; traversetype=&quot;loop&quot; traverseorder=&quot;forward&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; pathtargetvariable=&quot;&quot;
-      name=&quot;waypointpatrol&quot; movetargetvariable=&quot;movePos&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
+      repeatuntil=&quot;&quot; pathtargetvariable=&quot;&quot; name=&quot;waypointpatrol&quot;
+      movetargetvariable=&quot;movePos&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;patrolMoveAndAnimate&quot;
       debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
@@ -36,18 +36,17 @@ MonoBehaviour:
       damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;patrolMove&quot; movetarget=&quot;movePos&quot;
       movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;mecparam
-      valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      parametertype=&quot;boolean&quot; parametername=&quot;patrolling&quot; name=&quot;setPatrolFalse&quot;
-      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;/sequencer&gt;&lt;/waypointpatrol&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/waypointpatrol&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;chaseAndAttackIfEnemyDetected&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;player != null&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;chaseAndAnimate&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
-      parametername=&quot;chasing&quot; name=&quot;setChaseTrue&quot; debugbreak=&quot;False&quot;
-      damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;chaseEnemy&quot; movetarget=&quot;player&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;player != null&quot;&gt;&lt;mecparam
+      valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; parametertype=&quot;boolean&quot;
+      parametername=&quot;patrolling&quot; name=&quot;setPatrolFalse&quot; debugbreak=&quot;False&quot;
+      damptime=&quot;0&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;chaseAndAnimate&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam
+      valueexpression=&quot;true&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametertype=&quot;boolean&quot; parametername=&quot;chasing&quot; name=&quot;setChaseTrue&quot;
+      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;chaseEnemy&quot; movetarget=&quot;player&quot;
       movespeed=&quot;7&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;mecparam
       valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;

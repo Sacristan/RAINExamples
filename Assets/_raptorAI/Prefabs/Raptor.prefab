@@ -1273,9 +1273,9 @@ MonoBehaviour:
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
       reference="3" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
       reference="4" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
-      reference="5" id="_animator" childrenvisible="True" /><field type="RAIN.Navigation.BasicNavigator"
+      reference="5" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="26" id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="27"
-      id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
       type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
       id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
@@ -1363,7 +1363,7 @@ MonoBehaviour:
       /><field value="55.78" type="System.Single" id="_range" /><field value="False"
       type="System.Boolean" id="_canDetectSelf" /><field value="234.06" type="System.Single"
       id="_horizontalAngle" /><field value="40.1" type="System.Single" id="_verticalAngle"
-      /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="19"
+      /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="19"
       type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
       type="RAIN.Perception.Sensors.AudioSensor" refcount="1" id="29"><field value="True"
       type="System.Boolean" id="_showVisual" /><field value="Audio Sensor" type="System.String"
