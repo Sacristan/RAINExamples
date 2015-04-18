@@ -28,26 +28,34 @@ MonoBehaviour:
       /&gt;&lt;waypointpatrol waypointsetvariable=&quot;&amp;quot;Waypoint Network&amp;quot;&quot;
       waypointactiontype=&quot;patrol&quot; traversetype=&quot;loop&quot; traverseorder=&quot;forward&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; pathtargetvariable=&quot;&quot;
-      name=&quot;waypointpatrol&quot; movetargetvariable=&quot;movePos&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel
-      tiebreaker=&quot;succeed&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      name=&quot;patrolMoveAndAnimate&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
-      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;patrolMove&quot;
-      movetarget=&quot;movePos&quot; movespeed=&quot;&quot; facetarget=&quot;&quot;
-      debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
-      /&gt;&lt;animate repeatuntil=&quot;running&quot; name=&quot;patrolAnimate&quot;
-      debugbreak=&quot;False&quot; animationstate=&quot;Base Layer.patrolling&quot;
-      /&gt;&lt;/parallel&gt;&lt;/waypointpatrol&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
+      name=&quot;waypointpatrol&quot; movetargetvariable=&quot;movePos&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;patrolMoveAndAnimate&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
+      parametername=&quot;patrolling&quot; name=&quot;mecparam&quot; debugbreak=&quot;False&quot;
+      damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;patrolMove&quot; movetarget=&quot;movePos&quot;
+      movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;mecparam
+      valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametertype=&quot;boolean&quot; parametername=&quot;patrolling&quot; name=&quot;mecparam&quot;
+      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;/sequencer&gt;&lt;/waypointpatrol&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;chaseAndAttackIfEnemyDetected&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;player != null&quot;&gt;&lt;parallel
-      tiebreaker=&quot;succeed&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      name=&quot;chaseAndAnimate&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
-      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;chaseEnemy&quot;
-      movetarget=&quot;player&quot; movespeed=&quot;7&quot; facetarget=&quot;&quot;
-      debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
-      /&gt;&lt;animate repeatuntil=&quot;running&quot; name=&quot;animateChase&quot;
-      debugbreak=&quot;False&quot; animationstate=&quot;Base Layer.chasing&quot; /&gt;&lt;/parallel&gt;&lt;animate
-      repeatuntil=&quot;&quot; name=&quot;animateAttack&quot; debugbreak=&quot;False&quot;
-      animationstate=&quot;Base Layer.attacking&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
+      debugbreak=&quot;False&quot; constraint=&quot;player != null&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;chaseAndAnimate&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
+      parametername=&quot;chasing&quot; name=&quot;mecparam&quot; debugbreak=&quot;False&quot;
+      damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;chaseEnemy&quot; movetarget=&quot;player&quot;
+      movespeed=&quot;7&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;mecparam
+      valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametertype=&quot;boolean&quot; parametername=&quot;chasing&quot; name=&quot;mecparam&quot;
+      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;/sequencer&gt;&lt;mecparam
+      valueexpression=&quot;true&quot; repeatuntil=&quot;&quot; parametertype=&quot;trigger&quot;
+      parametername=&quot;attack&quot; name=&quot;attack&quot; debugbreak=&quot;False&quot;
+      damptime=&quot;0&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
