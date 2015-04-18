@@ -32,29 +32,29 @@ MonoBehaviour:
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;patrolMoveAndAnimate&quot;
       debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
-      parametername=&quot;patrolling&quot; name=&quot;mecparam&quot; debugbreak=&quot;False&quot;
+      parametername=&quot;patrolling&quot; name=&quot;setPatrolTrue&quot; debugbreak=&quot;False&quot;
       damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;patrolMove&quot; movetarget=&quot;movePos&quot;
       movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;mecparam
       valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      parametertype=&quot;boolean&quot; parametername=&quot;patrolling&quot; name=&quot;mecparam&quot;
+      parametertype=&quot;boolean&quot; parametername=&quot;patrolling&quot; name=&quot;setPatrolFalse&quot;
       debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;/sequencer&gt;&lt;/waypointpatrol&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;chaseAndAttackIfEnemyDetected&quot;
       debugbreak=&quot;False&quot; constraint=&quot;player != null&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;chaseAndAnimate&quot;
       debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
-      parametername=&quot;chasing&quot; name=&quot;mecparam&quot; debugbreak=&quot;False&quot;
+      parametername=&quot;chasing&quot; name=&quot;setChaseTrue&quot; debugbreak=&quot;False&quot;
       damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;chaseEnemy&quot; movetarget=&quot;player&quot;
       movespeed=&quot;7&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;mecparam
       valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      parametertype=&quot;boolean&quot; parametername=&quot;chasing&quot; name=&quot;mecparam&quot;
+      parametertype=&quot;boolean&quot; parametername=&quot;chasing&quot; name=&quot;setChaseFalse&quot;
       debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;/sequencer&gt;&lt;mecparam
       valueexpression=&quot;true&quot; repeatuntil=&quot;&quot; parametertype=&quot;trigger&quot;
-      parametername=&quot;attack&quot; name=&quot;attack&quot; debugbreak=&quot;False&quot;
+      parametername=&quot;attack&quot; name=&quot;triggerAttack&quot; debugbreak=&quot;False&quot;
       damptime=&quot;0&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>

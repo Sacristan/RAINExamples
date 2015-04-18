@@ -1272,13 +1272,13 @@ MonoBehaviour:
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
       reference="3" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
-      reference="4" id="_motor" /><field type="RAIN.Animation.MecanimAnimator" reference="5"
-      id="_animator" /><field type="RAIN.Navigation.BasicNavigator" reference="26"
-      id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="27" id="_senses"
-      childrenvisible="True" /><field type="System.Collections.Generic.List" id="_customElements"
-      elementtype="RAIN.Core.CustomAIElement" /></reference><reference type="RAIN.Memory.BasicMemory"
-      refcount="1" id="1"><field type="System.Collections.Generic.List" id="_memoryItems"
-      elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
+      reference="4" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+      reference="5" id="_animator" childrenvisible="True" /><field type="RAIN.Navigation.BasicNavigator"
+      reference="26" id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="27"
+      id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
+      type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
+      id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
       reference="2" id="element0" /></field></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem"
       refcount="1" id="2"><field value="patrolWaypoints" type="System.String" id="Key"
       /><field value="UnityEngine.GameObject" type="System.Type" id="ValueType" /><field
@@ -1299,20 +1299,17 @@ MonoBehaviour:
       reference="8" id="_rightHand" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
       reference="9" id="_leftHand" /><field type="RAIN.Animation.MecanimAnimator+IKLookAt"
       reference="10" id="_lookAt" /><field type="System.Collections.Generic.List"
-      id="_animationStates" elementtype="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"><field
-      type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" reference="11" id="element0"
-      /><field type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" reference="16"
-      id="element1" /><field type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
-      reference="21" id="element2" /></field></reference><reference type="RAIN.Animation.MecanimAnimator+IKTarget"
-      refcount="1" id="6"><field value="False" type="System.Boolean" id="isActive"
-      /><field value="0" type="System.Single" id="positionWeight" /><field value="0"
-      type="System.Single" id="rotationWeight" /><field value="0,0,0" type="UnityEngine.Vector3"
-      id="positionVector" /><field value="0,0,0" type="UnityEngine.Vector3" id="rotationVector"
+      id="_animationStates" elementtype="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
       /></reference><reference type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1"
-      id="7"><field value="False" type="System.Boolean" id="isActive" /><field value="0"
+      id="6"><field value="False" type="System.Boolean" id="isActive" /><field value="0"
       type="System.Single" id="positionWeight" /><field value="0" type="System.Single"
       id="rotationWeight" /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector"
       /><field value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
+      type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="7"><field value="False"
+      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
+      id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
+      /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
+      value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
       type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="8"><field value="False"
       type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
       id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
@@ -1331,56 +1328,26 @@ MonoBehaviour:
       id="lookAtClampWeight" /><field value="90" type="System.Single" id="maxTurnRate"
       /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
       value="0,0,0" type="UnityEngine.Vector3" id="lastPositionVector" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" refcount="1" id="11"><field
-      value="Patrolling" type="System.String" id="mecanimState" /><field value="0"
-      type="System.Int32" id="layer" /><field type="RAIN.Animation.MecanimParameterValue"
-      reference="12" id="startParameter" /><field type="RAIN.Animation.MecanimParameterValue"
-      reference="14" id="stopParameter" /></reference><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="1" id="12"><field value="patrolling" type="System.String" id="parameterName"
-      /><field value="Boolean" type="RAIN.Animation.MecanimParameterValue+SupportedMecanimType"
-      id="parameterType" /><field type="RAIN.Representation.Expression" reference="13"
-      id="parameterValue" /><field value="0" type="System.Single" id="dampTime" /></reference><reference
-      type="RAIN.Representation.Expression" refcount="1" id="13" customdata="0" /><reference
-      type="RAIN.Animation.MecanimParameterValue" refcount="1" id="14"><field value="patrolling"
-      type="System.String" id="parameterName" /><field value="Boolean" type="RAIN.Animation.MecanimParameterValue+SupportedMecanimType"
-      id="parameterType" /><field type="RAIN.Representation.Expression" reference="15"
-      id="parameterValue" /><field value="0" type="System.Single" id="dampTime" /></reference><reference
-      type="RAIN.Representation.Expression" refcount="1" id="15" customdata="1" /><reference
-      type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" refcount="1" id="16"><field
-      value="Chasing" type="System.String" id="mecanimState" /><field value="0" type="System.Int32"
-      id="layer" /><field type="RAIN.Animation.MecanimParameterValue" reference="17"
-      id="startParameter" /><field type="RAIN.Animation.MecanimParameterValue" reference="19"
-      id="stopParameter" /></reference><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="1" id="17"><field value="chasing" type="System.String" id="parameterName"
-      /><field value="Boolean" type="RAIN.Animation.MecanimParameterValue+SupportedMecanimType"
-      id="parameterType" /><field type="RAIN.Representation.Expression" reference="18"
-      id="parameterValue" /><field value="0" type="System.Single" id="dampTime" /></reference><reference
-      type="RAIN.Representation.Expression" refcount="1" id="18" customdata="2" /><reference
-      type="RAIN.Animation.MecanimParameterValue" refcount="1" id="19"><field value="chasing"
-      type="System.String" id="parameterName" /><field value="Boolean" type="RAIN.Animation.MecanimParameterValue+SupportedMecanimType"
-      id="parameterType" /><field type="RAIN.Representation.Expression" reference="20"
-      id="parameterValue" /><field value="0" type="System.Single" id="dampTime" /></reference><reference
-      type="RAIN.Representation.Expression" refcount="1" id="20" customdata="3" /><reference
-      type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" refcount="1" id="21"><field
-      value="Attacking" type="System.String" id="mecanimState" /><field value="0"
-      type="System.Int32" id="layer" /><field type="RAIN.Animation.MecanimParameterValue"
-      reference="22" id="startParameter" /><field type="RAIN.Animation.MecanimParameterValue"
-      reference="24" id="stopParameter" /></reference><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="1" id="22"><field value="attacking" type="System.String" id="parameterName"
-      /><field value="Boolean" type="RAIN.Animation.MecanimParameterValue+SupportedMecanimType"
-      id="parameterType" /><field type="RAIN.Representation.Expression" reference="23"
-      id="parameterValue" /><field value="0" type="System.Single" id="dampTime" /></reference><reference
-      type="RAIN.Representation.Expression" refcount="1" id="23" customdata="4" /><reference
-      type="RAIN.Animation.MecanimParameterValue" refcount="1" id="24"><field value="attacking"
-      type="System.String" id="parameterName" /><field value="Boolean" type="RAIN.Animation.MecanimParameterValue+SupportedMecanimType"
-      id="parameterType" /><field type="RAIN.Representation.Expression" reference="25"
-      id="parameterValue" /><field value="0" type="System.Single" id="dampTime" /></reference><reference
-      type="RAIN.Representation.Expression" refcount="1" id="25" customdata="5" /><reference
-      type="RAIN.Navigation.BasicNavigator" refcount="1" id="26"><field value="False"
-      type="System.Boolean" id="_drawPaths" /><field value="0,1,0,1" type="UnityEngine.Color"
-      id="_pathColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
-      /><field value="100" type="System.Int32" id="_maxPathfindingSteps" /><field
-      value="0" type="System.Single" id="_maxPathLength" /><field type="System.Collections.Generic.List"
+      type="RAIN.Representation.Expression" refcount="0" id="11" customdata="15" /><reference
+      type="RAIN.Representation.Expression" refcount="0" id="12" customdata="20" /><reference
+      type="RAIN.Representation.Expression" refcount="0" id="13" customdata="28" /><reference
+      type="RAIN.Representation.Expression" refcount="0" id="14" customdata="33" /><reference
+      type="RAIN.Representation.Expression" refcount="0" id="15" customdata="41" /><reference
+      type="RAIN.Representation.Expression" refcount="0" id="16" customdata="46" /><reference
+      type="RAIN.Animation.MecanimParameterValue" refcount="0" id="17" /><reference
+      type="RAIN.Representation.Expression" refcount="0" id="18" customdata="2" /><reference
+      type="RAIN.Animation.MecanimParameterValue" refcount="0" id="19" /><reference
+      type="RAIN.Representation.Expression" refcount="0" id="20" customdata="3" /><reference
+      type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" refcount="0" id="21"
+      /><reference type="RAIN.Animation.MecanimParameterValue" refcount="0" id="22"
+      /><reference type="RAIN.Representation.Expression" refcount="0" id="23" customdata="4"
+      /><reference type="RAIN.Animation.MecanimParameterValue" refcount="0" id="24"
+      /><reference type="RAIN.Representation.Expression" refcount="0" id="25" customdata="5"
+      /><reference type="RAIN.Navigation.BasicNavigator" refcount="1" id="26"><field
+      value="False" type="System.Boolean" id="_drawPaths" /><field value="0,1,0,1"
+      type="UnityEngine.Color" id="_pathColor" /><field value="-0.5" type="System.Single"
+      id="_outlineColorOffset" /><field value="100" type="System.Int32" id="_maxPathfindingSteps"
+      /><field value="0" type="System.Single" id="_maxPathLength" /><field type="System.Collections.Generic.List"
       id="_graphTags" elementtype="System.String" /></reference><reference type="RAIN.Perception.BasicSenses"
       refcount="1" id="27"><field type="System.Collections.Generic.List" id="_sensors"
       elementtype="RAIN.Perception.Sensors.RAINSensor"><field type="RAIN.Perception.Sensors.VisualSensor"
@@ -1396,7 +1363,7 @@ MonoBehaviour:
       /><field value="55.78" type="System.Single" id="_range" /><field value="False"
       type="System.Boolean" id="_canDetectSelf" /><field value="234.06" type="System.Single"
       id="_horizontalAngle" /><field value="40.1" type="System.Single" id="_verticalAngle"
-      /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="19"
+      /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="19"
       type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
       type="RAIN.Perception.Sensors.AudioSensor" refcount="1" id="29"><field value="True"
       type="System.Boolean" id="_showVisual" /><field value="Audio Sensor" type="System.String"
@@ -1408,7 +1375,22 @@ MonoBehaviour:
       id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
       /><field value="40" type="System.Single" id="_range" /><field value="False"
       type="System.Boolean" id="_canDetectSelf" /><field value="0.1" type="System.Single"
-      id="_volumeThreshold" /></reference></references></component>
+      id="_volumeThreshold" /></reference><reference type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
+      refcount="0" id="30" /><reference type="RAIN.Animation.MecanimParameterValue"
+      refcount="0" id="31" /><reference type="RAIN.Representation.Expression" refcount="0"
+      id="32" customdata="6" /><reference type="RAIN.Animation.MecanimParameterValue"
+      refcount="0" id="33" /><reference type="RAIN.Representation.Expression" refcount="0"
+      id="34" customdata="7" /><reference type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
+      refcount="0" id="35" /><reference type="RAIN.Animation.MecanimParameterValue"
+      refcount="0" id="36" /><reference type="RAIN.Representation.Expression" refcount="0"
+      id="37" customdata="8" /><reference type="RAIN.Animation.MecanimParameterValue"
+      refcount="0" id="38" /><reference type="RAIN.Representation.Expression" refcount="0"
+      id="39" customdata="9" /><reference type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
+      refcount="0" id="40" /><reference type="RAIN.Animation.MecanimParameterValue"
+      refcount="0" id="41" /><reference type="RAIN.Representation.Expression" refcount="0"
+      id="42" customdata="10" /><reference type="RAIN.Animation.MecanimParameterValue"
+      refcount="0" id="43" /><reference type="RAIN.Representation.Expression" refcount="0"
+      id="44" customdata="11" /></references></component>
     _serializedGameObjects:
     - {fileID: 190598}
     - {fileID: 11400000, guid: 0e200eea044d4834f83b28ef07975e57, type: 2}
@@ -1425,6 +1407,88 @@ MonoBehaviour:
       _stringData: ZmFsc2UNCg==
     - _data: 
       _stringData: dHJ1ZQ0K
+    - _data: 
+      _stringData: ZmFsc2UNCg==
+    - _data: 
+      _stringData: DQo=
+    - _data: 
+      _stringData: DQo=
+    - _data: 
+      _stringData: DQo=
+    - _data: 
+      _stringData: DQo=
+    - _data: 
+      _stringData: DQo=
+    - _data: 
+      _stringData: DQo=
+    - _data: 
+      _stringData: dA0K
+    - _data: 
+      _stringData: dHINCg==
+    - _data: 
+      _stringData: dHJ1DQo=
+    - _data: 
+      _stringData: dHJ1ZQ0K
+    - _data: 
+      _stringData: Zg0K
+    - _data: 
+      _stringData: ZmENCg==
+    - _data: 
+      _stringData: ZmFsDQo=
+    - _data: 
+      _stringData: ZmFscw0K
+    - _data: 
+      _stringData: ZmFsc2UNCg==
+    - _data: 
+      _stringData: dA0K
+    - _data: 
+      _stringData: dHINCg==
+    - _data: 
+      _stringData: dHJ1DQo=
+    - _data: 
+      _stringData: dHJ1aQ0K
+    - _data: 
+      _stringData: dHJ1aWUNCg==
+    - _data: 
+      _stringData: dHJ1aQ0K
+    - _data: 
+      _stringData: dHJ1DQo=
+    - _data: 
+      _stringData: dHJ1ZQ0K
+    - _data: 
+      _stringData: Zg0K
+    - _data: 
+      _stringData: ZmENCg==
+    - _data: 
+      _stringData: ZmFsDQo=
+    - _data: 
+      _stringData: ZmFscw0K
+    - _data: 
+      _stringData: ZmFsc2UNCg==
+    - _data: 
+      _stringData: Zg0K
+    - _data: 
+      _stringData: ZmENCg==
+    - _data: 
+      _stringData: Zg0K
+    - _data: 
+      _stringData: DQo=
+    - _data: 
+      _stringData: dA0K
+    - _data: 
+      _stringData: dHINCg==
+    - _data: 
+      _stringData: dHJ1DQo=
+    - _data: 
+      _stringData: dHJ1ZQ0K
+    - _data: 
+      _stringData: Zg0K
+    - _data: 
+      _stringData: ZmENCg==
+    - _data: 
+      _stringData: ZmFsDQo=
+    - _data: 
+      _stringData: ZmFscw0K
     - _data: 
       _stringData: ZmFsc2UNCg==
 --- !u!137 &13734364
