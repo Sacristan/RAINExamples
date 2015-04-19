@@ -45,6 +45,7 @@ GameObject:
   - 114: {fileID: 11403964}
   - 54: {fileID: 5415046}
   - 82: {fileID: 8218022}
+  - 114: {fileID: 11493892}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Untagged
@@ -58,8 +59,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198330}
-  m_LocalRotation: {x: 0, y: .122858793, z: 0, w: -.99242419}
-  m_LocalPosition: {x: 152.899994, y: 1.79999995, z: 56.5}
+  m_LocalRotation: {x: 0, y: .463920265, z: 0, w: -.885876954}
+  m_LocalPosition: {x: 205.5, y: 1.79999995, z: 86.1999969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 473926}
@@ -351,6 +352,18 @@ MonoBehaviour:
     - {fileID: 439536}
     - {fileID: 8218022}
     _serializedCustomData: []
+--- !u!114 &11493892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54092c1bb2b783b43a34b6230f0dd370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!143 &14392600
 CharacterController:
   m_ObjectHideFlags: 1
