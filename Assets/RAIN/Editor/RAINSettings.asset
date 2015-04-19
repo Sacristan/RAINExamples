@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: -583055799, guid: e0781e12b13132b45bf09c20fcd34d12, type: 3}
   m_Name: RAINSettings
   m_EditorClassIdentifier: 
-  _actionsDirectory: Assets/_raptorAI/AI/Actions/
-  _cacheDirectory: Assets/_raptorAI/AI/Cache/
-  _btSaveDirectory: Assets/_raptorAI/AI/BehaviorTrees/
-  _btEditorSearchDirectory: Assets/_raptorAI/AI/BehaviorTrees/
+  _actionsDirectory: Assets/_RAIN_Examples/AI/Actions/
+  _cacheDirectory: Assets/_RAIN_Examples/AI/Cache/
+  _btSaveDirectory: Assets/_RAIN_Examples/BehaviorTrees/
+  _btEditorSearchDirectory: Assets/_RAIN_Examples/AI/BehaviorTrees/
   _btInspectorPaneWidth: 300
   _btInspectorFieldWidth: 120
   _navMeshGenerationThreads: 4
