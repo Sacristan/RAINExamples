@@ -9,7 +9,7 @@ public class PlayerHealthManager : MonoBehaviour {
     void OnGUI()
     {
         string textToDisplay = System.String.Format("Player Health: {0} ",health);
-        Rect textToDisplayRectancle = new Rect(0,0,100,100);
+        Rect textToDisplayRectancle = new Rect(0,0,120,120);
         GUI.Label(textToDisplayRectancle, textToDisplay);
     }
 
