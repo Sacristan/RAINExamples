@@ -57,7 +57,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;trigger&quot;
       parametername=&quot;attack&quot; name=&quot;triggerAttack&quot; debugbreak=&quot;False&quot;
       damptime=&quot;0&quot; /&gt;&lt;mecstate repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;mecstate&quot; debugbreak=&quot;False&quot; animationstate=&quot;!
+      name=&quot;waitUntilAttackingState&quot; debugbreak=&quot;False&quot; animationstate=&quot;!
       &amp;quot;Base Layer.attacking&amp;quot;&quot; animationlayer=&quot;0&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;&quot;
       parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;registerPlayerDamage&quot;

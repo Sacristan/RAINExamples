@@ -31,9 +31,14 @@ public class RegisterPlayerDamage : RAINAction
             lastAttackTime = nodeEntryTime;
             ai.WorkingMemory.SetItem<float>(memoryKey, nodeEntryTime);
             playerObject.SendMessage("ReceiveDamage", meleeDamage);
+            return ActionResult.SUCCESS;
+        }
+        else
+        {
+            return ActionResult.FAILURE;
         }
 
-        return ActionResult.SUCCESS;
+
     }
 
 }
