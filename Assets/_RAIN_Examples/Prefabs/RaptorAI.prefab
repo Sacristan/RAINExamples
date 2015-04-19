@@ -612,7 +612,7 @@ GameObject:
   - 4: {fileID: 447796}
   - 95: {fileID: 9510058}
   m_Layer: 0
-  m_Name: Raptor
+  m_Name: RaptorAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
