@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionsDirectory: Assets/_RAIN_Examples/AI/Actions/
   _cacheDirectory: Assets/_RAIN_Examples/AI/Cache/
-  _btSaveDirectory: Assets/_RAIN_Examples/BehaviorTrees/
+  _btSaveDirectory: Assets/_RAIN_Examples/AI/BehaviorTrees/
   _btEditorSearchDirectory: Assets/_RAIN_Examples/AI/BehaviorTrees/
   _btInspectorPaneWidth: 300
   _btInspectorFieldWidth: 120
