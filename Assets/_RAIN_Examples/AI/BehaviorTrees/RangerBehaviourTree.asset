@@ -14,12 +14,28 @@ MonoBehaviour:
   _dataSerializer:
     _serializedData: <scriptableobject version="1.2" type="RAIN.BehaviorTrees.BTAsset"><fields><field
       value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;RangerBehaviourTree&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;succeed&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot;
       debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;root&quot; debugbreak=&quot;False&quot;&gt;&lt;waypointpatrol
-      waypointsetvariable=&quot;&amp;quot;Waypoint Route&amp;quot;&quot; waypointactiontype=&quot;patrol&quot;
-      traversetype=&quot;loop&quot; traverseorder=&quot;forward&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; pathtargetvariable=&quot;&quot; name=&quot;patrol&quot;
-      movetargetvariable=&quot;patrolPoint&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam
+      repeatuntil=&quot;&quot; name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;detect&quot;
+      matchtype=&quot;best&quot; entityobjectvariable=&quot;player&quot; debugbreak=&quot;False&quot;
+      consistent=&quot;True&quot; aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot;
+      aspect=&quot;&amp;quot;Player&amp;quot;&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;patrol&quot; expression=&quot;patrol
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;cGxheWVyAGxhc3RLbm93blBsYXllclBvc2l0aW9u&quot;
+      parameters=&quot;c291cmNlVmFyaWFibGUAZm9ybVZhcmlhYmxl&quot; namespace=&quot;(global)&quot;
+      name=&quot;setLastKnownPlayerPosition&quot; debugbreak=&quot;False&quot; classname=&quot;SetLastKnownPosition&quot;
+      /&gt;&lt;/sequencer&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;behaviour&quot; debugbreak=&quot;False&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;selectBehaviour&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;patrol?&quot; debugbreak=&quot;False&quot; constraint=&quot;patrol
+      == true&quot;&gt;&lt;waypointpatrol waypointsetvariable=&quot;&amp;quot;Waypoint
+      Route&amp;quot;&quot; waypointactiontype=&quot;patrol&quot; traversetype=&quot;loop&quot;
+      traverseorder=&quot;forward&quot; repeatuntil=&quot;&quot; pathtargetvariable=&quot;&quot;
+      name=&quot;patrol&quot; movetargetvariable=&quot;patrolPoint&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam
       valueexpression=&quot;true&quot; repeatuntil=&quot;&quot; parametertype=&quot;boolean&quot;
       parametername=&quot;patrolling&quot; name=&quot;setPatrollingTrue&quot; debugbreak=&quot;False&quot;
       damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
@@ -29,7 +45,26 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; parametertype=&quot;boolean&quot; parametername=&quot;patrolling&quot;
       name=&quot;setPatrollingFalse&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
       /&gt;&lt;timer waitforsec=&quot;random(2,5)&quot; returnvalue=&quot;success&quot;
-      name=&quot;waitThereForSomeTime&quot; debugbreak=&quot;False&quot; /&gt;&lt;/waypointpatrol&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
+      name=&quot;waitThereForSomeTime&quot; debugbreak=&quot;False&quot; /&gt;&lt;/waypointpatrol&gt;&lt;/constraint&gt;&lt;selector
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;chaseAndAttack&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;player  != null&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;player  != null&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;chase&quot; movetarget=&quot;player&quot;
+      movespeed=&quot;4&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;moveToLastKnownPlayerPos&quot;
+      movetarget=&quot;lastKnownPlayerPosition&quot; movespeed=&quot;&quot; facetarget=&quot;&quot;
+      debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
+      /&gt;&lt;timer waitforsec=&quot;2&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;waitForSomeTime&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;patrol = true&quot; expression=&quot;patrol = true&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/selector&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;player = null&quot;
+      expression=&quot;player = null&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []

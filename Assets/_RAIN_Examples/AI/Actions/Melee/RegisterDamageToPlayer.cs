@@ -6,7 +6,7 @@ using RAIN.Core;
 using RAIN.Representation;
 
 
-namespace Sacristan.MeleeAI
+namespace Sacristan.Melee
 {
     [RAINAction]
     public class RegisterDamageToPlayer : RAINAction

@@ -766,8 +766,8 @@ Prefab:
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="2"
         id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
         reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
-        reference="4" id="_animator" childrenvisible="True" /><field type="RAIN.Navigation.BasicNavigator"
-        reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
+        reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
+        reference="5" id="_navigator" childrenvisible="True" /><field type="RAIN.Perception.BasicSenses"
         reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
         type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
@@ -791,7 +791,7 @@ Prefab:
         reference="12" id="_lookAt" /><field type="System.Collections.Generic.List"
         id="_animationStates" elementtype="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
         /></reference><reference type="RAIN.Navigation.BasicNavigator" refcount="1"
-        id="5"><field value="False" type="System.Boolean" id="_drawPaths" /><field
+        id="5"><field value="True" type="System.Boolean" id="_drawPaths" /><field
         value="0,1,0,1" type="UnityEngine.Color" id="_pathColor" /><field value="-0.5"
         type="System.Single" id="_outlineColorOffset" /><field value="100" type="System.Int32"
         id="_maxPathfindingSteps" /><field value="0" type="System.Single" id="_maxPathLength"
