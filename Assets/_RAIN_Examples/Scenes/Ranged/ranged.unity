@@ -423,7 +423,7 @@ Prefab:
         type="System.Single" id="_rotationSpeed" /><field value="1.5" type="System.Single"
         id="_closeEnoughDistance" /><field value="0.1" type="System.Single" id="_closeEnoughAngle"
         /><field value="90" type="System.Single" id="_faceBeforeMoveAngle" /><field
-        value="0.5" type="System.Single" id="_stepUpHeight" /><field value="False"
+        value="0.5" type="System.Single" id="_stepUpHeight" /><field value="True"
         type="System.Boolean" id="_allow3DMovement" /><field value="False" type="System.Boolean"
         id="_allow3DRotation" /><field value="True" type="System.Boolean" id="_allowOffGraphMovement"
         /></reference><reference type="RAIN.Animation.BasicAnimator" refcount="1"
