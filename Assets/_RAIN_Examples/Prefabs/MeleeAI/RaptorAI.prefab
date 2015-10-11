@@ -1263,22 +1263,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dataSerializer:
-    _serializedData: <component version="1.2" type="RAIN.Core.AIRig"><fields><field
+    _serializedData: <component version="1.3" type="RAIN.Core.AIRig"><fields><field
       value="OnWhenSelected" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field
       value="True" type="System.Boolean" id="_useUnityMessages" /><field value="False"
       type="System.Boolean" id="_useFixedUpdate" /><field type="RAIN.Core.AI" reference="0"
       id="_ai" /></fields><references><reference type="RAIN.Core.AI" refcount="1"
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
-      id="_workingMemory" childrenvisible="True" /><field type="RAIN.Minds.BasicMind"
-      reference="3" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
-      reference="4" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
-      reference="5" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
-      reference="26" id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="27"
-      id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
-      id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
-      type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
-      id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
+      id="_workingMemory" /><field type="RAIN.Minds.BasicMind" reference="3" id="_mind"
+      /><field type="RAIN.Motion.BasicMotor" reference="4" id="_motor" /><field type="RAIN.Animation.MecanimAnimator"
+      reference="5" id="_animator" /><field type="RAIN.Navigation.BasicNavigator"
+      reference="11" id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="12"
+      id="_senses" /><field type="System.Collections.Generic.List" id="_customElements"
+      elementtype="RAIN.Core.CustomAIElement" /></reference><reference type="RAIN.Memory.BasicMemory"
+      refcount="1" id="1"><field type="System.Collections.Generic.List" id="_memoryItems"
+      elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
       reference="2" id="element0" /></field></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem"
       refcount="1" id="2"><field value="patrolWaypoints" type="System.String" id="Key"
       /><field value="UnityEngine.GameObject" type="System.Type" id="ValueType" /><field
@@ -1290,16 +1289,16 @@ MonoBehaviour:
       value="180" type="System.Single" id="_rotationSpeed" /><field value="3.5" type="System.Single"
       id="_closeEnoughDistance" /><field value="0.1" type="System.Single" id="_closeEnoughAngle"
       /><field value="90" type="System.Single" id="_faceBeforeMoveAngle" /><field
-      value="0.5" type="System.Single" id="_stepUpHeight" /><field value="False" type="System.Boolean"
-      id="_allow3DMovement" /><field value="False" type="System.Boolean" id="_allow3DRotation"
-      /><field value="True" type="System.Boolean" id="_allowOffGraphMovement" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator" refcount="1" id="5"><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="6" id="_rightFoot" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="7" id="_leftFoot" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="8" id="_rightHand" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="9" id="_leftHand" /><field type="RAIN.Animation.MecanimAnimator+IKLookAt"
-      reference="10" id="_lookAt" /><field type="System.Collections.Generic.List"
-      id="_animationStates" elementtype="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
+      value="0.5" type="System.Single" id="_maxHeightOffset" /><field value="False"
+      type="System.Boolean" id="_allow3DMovement" /><field value="False" type="System.Boolean"
+      id="_allow3DRotation" /><field value="True" type="System.Boolean" id="_allowOffGraphMovement"
+      /></reference><reference type="RAIN.Animation.MecanimAnimator" refcount="1"
+      id="5"><field type="RAIN.Animation.MecanimAnimator+IKTarget" reference="6" id="_rightFoot"
+      /><field type="RAIN.Animation.MecanimAnimator+IKTarget" reference="7" id="_leftFoot"
+      /><field type="RAIN.Animation.MecanimAnimator+IKTarget" reference="8" id="_rightHand"
+      /><field type="RAIN.Animation.MecanimAnimator+IKTarget" reference="9" id="_leftHand"
+      /><field type="RAIN.Animation.MecanimAnimator+IKLookAt" reference="10" id="_lookAt"
+      /><field type="System.Collections.Generic.List" id="_animationStates" elementtype="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
       /></reference><reference type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1"
       id="6"><field value="False" type="System.Boolean" id="isActive" /><field value="0"
       type="System.Single" id="positionWeight" /><field value="0" type="System.Single"
@@ -1328,32 +1327,17 @@ MonoBehaviour:
       id="lookAtClampWeight" /><field value="90" type="System.Single" id="maxTurnRate"
       /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
       value="0,0,0" type="UnityEngine.Vector3" id="lastPositionVector" /></reference><reference
-      type="RAIN.Representation.Expression" refcount="0" id="11" customdata="15" /><reference
-      type="RAIN.Representation.Expression" refcount="0" id="12" customdata="20" /><reference
-      type="RAIN.Representation.Expression" refcount="0" id="13" customdata="28" /><reference
-      type="RAIN.Representation.Expression" refcount="0" id="14" customdata="33" /><reference
-      type="RAIN.Representation.Expression" refcount="0" id="15" customdata="41" /><reference
-      type="RAIN.Representation.Expression" refcount="0" id="16" customdata="46" /><reference
-      type="RAIN.Animation.MecanimParameterValue" refcount="0" id="17" /><reference
-      type="RAIN.Representation.Expression" refcount="0" id="18" customdata="2" /><reference
-      type="RAIN.Animation.MecanimParameterValue" refcount="0" id="19" /><reference
-      type="RAIN.Representation.Expression" refcount="0" id="20" customdata="3" /><reference
-      type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" refcount="0" id="21"
-      /><reference type="RAIN.Animation.MecanimParameterValue" refcount="0" id="22"
-      /><reference type="RAIN.Representation.Expression" refcount="0" id="23" customdata="4"
-      /><reference type="RAIN.Animation.MecanimParameterValue" refcount="0" id="24"
-      /><reference type="RAIN.Representation.Expression" refcount="0" id="25" customdata="5"
-      /><reference type="RAIN.Navigation.BasicNavigator" refcount="1" id="26"><field
-      value="False" type="System.Boolean" id="_drawPaths" /><field value="0,1,0,1"
-      type="UnityEngine.Color" id="_pathColor" /><field value="-0.5" type="System.Single"
-      id="_outlineColorOffset" /><field value="100" type="System.Int32" id="_maxPathfindingSteps"
-      /><field value="0" type="System.Single" id="_maxPathLength" /><field type="System.Collections.Generic.List"
+      type="RAIN.Navigation.BasicNavigator" refcount="1" id="11"><field value="False"
+      type="System.Boolean" id="_drawPaths" /><field value="0,1,0,1" type="UnityEngine.Color"
+      id="_pathColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
+      /><field value="100" type="System.Int32" id="_maxPathfindingSteps" /><field
+      value="0" type="System.Single" id="_maxPathLength" /><field type="System.Collections.Generic.List"
       id="_graphTags" elementtype="System.String" /></reference><reference type="RAIN.Perception.BasicSenses"
-      refcount="1" id="27"><field type="System.Collections.Generic.List" id="_sensors"
+      refcount="1" id="12"><field type="System.Collections.Generic.List" id="_sensors"
       elementtype="RAIN.Perception.Sensors.RAINSensor"><field type="RAIN.Perception.Sensors.VisualSensor"
-      reference="28" id="element0" /><field type="RAIN.Perception.Sensors.AudioSensor"
-      reference="29" id="element1" /></field></reference><reference type="RAIN.Perception.Sensors.VisualSensor"
-      refcount="1" id="28"><field value="True" type="System.Boolean" id="_showVisual"
+      reference="13" id="element0" /><field type="RAIN.Perception.Sensors.AudioSensor"
+      reference="14" id="element1" /></field></reference><reference type="RAIN.Perception.Sensors.VisualSensor"
+      refcount="1" id="13"><field value="True" type="System.Boolean" id="_showVisual"
       /><field value="Visual Sensor" type="System.String" id="_sensorName" /><field
       value="True" type="System.Boolean" id="_isActive" /><field value="0,0.6,0.6,1"
       type="UnityEngine.Color" id="_sensorColor" /><field type="UnityEngine.Transform"
@@ -1365,7 +1349,7 @@ MonoBehaviour:
       id="_horizontalAngle" /><field value="40.1" type="System.Single" id="_verticalAngle"
       /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="19"
       type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
-      type="RAIN.Perception.Sensors.AudioSensor" refcount="1" id="29"><field value="True"
+      type="RAIN.Perception.Sensors.AudioSensor" refcount="1" id="14"><field value="True"
       type="System.Boolean" id="_showVisual" /><field value="Audio Sensor" type="System.String"
       id="_sensorName" /><field value="True" type="System.Boolean" id="_isActive"
       /><field value="0.6,0.5529412,0.009411765,1" type="UnityEngine.Color" id="_sensorColor"
@@ -1375,122 +1359,13 @@ MonoBehaviour:
       id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
       /><field value="40" type="System.Single" id="_range" /><field value="False"
       type="System.Boolean" id="_canDetectSelf" /><field value="0.1" type="System.Single"
-      id="_volumeThreshold" /></reference><reference type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
-      refcount="0" id="30" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="31" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="32" customdata="6" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="33" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="34" customdata="7" /><reference type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
-      refcount="0" id="35" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="36" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="37" customdata="8" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="38" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="39" customdata="9" /><reference type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
-      refcount="0" id="40" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="41" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="42" customdata="10" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="43" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="44" customdata="11" /></references></component>
+      id="_volumeThreshold" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 190598}
     - {fileID: 11400000, guid: 0e200eea044d4834f83b28ef07975e57, type: 2}
     - {fileID: 447796}
     - {fileID: 447796}
-    _serializedCustomData:
-    - _data: 
-      _stringData: dHJ1ZQ0K
-    - _data: 
-      _stringData: ZmFsc2UNCg==
-    - _data: 
-      _stringData: dHJ1ZQ0K
-    - _data: 
-      _stringData: ZmFsc2UNCg==
-    - _data: 
-      _stringData: dHJ1ZQ0K
-    - _data: 
-      _stringData: ZmFsc2UNCg==
-    - _data: 
-      _stringData: DQo=
-    - _data: 
-      _stringData: DQo=
-    - _data: 
-      _stringData: DQo=
-    - _data: 
-      _stringData: DQo=
-    - _data: 
-      _stringData: DQo=
-    - _data: 
-      _stringData: DQo=
-    - _data: 
-      _stringData: dA0K
-    - _data: 
-      _stringData: dHINCg==
-    - _data: 
-      _stringData: dHJ1DQo=
-    - _data: 
-      _stringData: dHJ1ZQ0K
-    - _data: 
-      _stringData: Zg0K
-    - _data: 
-      _stringData: ZmENCg==
-    - _data: 
-      _stringData: ZmFsDQo=
-    - _data: 
-      _stringData: ZmFscw0K
-    - _data: 
-      _stringData: ZmFsc2UNCg==
-    - _data: 
-      _stringData: dA0K
-    - _data: 
-      _stringData: dHINCg==
-    - _data: 
-      _stringData: dHJ1DQo=
-    - _data: 
-      _stringData: dHJ1aQ0K
-    - _data: 
-      _stringData: dHJ1aWUNCg==
-    - _data: 
-      _stringData: dHJ1aQ0K
-    - _data: 
-      _stringData: dHJ1DQo=
-    - _data: 
-      _stringData: dHJ1ZQ0K
-    - _data: 
-      _stringData: Zg0K
-    - _data: 
-      _stringData: ZmENCg==
-    - _data: 
-      _stringData: ZmFsDQo=
-    - _data: 
-      _stringData: ZmFscw0K
-    - _data: 
-      _stringData: ZmFsc2UNCg==
-    - _data: 
-      _stringData: Zg0K
-    - _data: 
-      _stringData: ZmENCg==
-    - _data: 
-      _stringData: Zg0K
-    - _data: 
-      _stringData: DQo=
-    - _data: 
-      _stringData: dA0K
-    - _data: 
-      _stringData: dHINCg==
-    - _data: 
-      _stringData: dHJ1DQo=
-    - _data: 
-      _stringData: dHJ1ZQ0K
-    - _data: 
-      _stringData: Zg0K
-    - _data: 
-      _stringData: ZmENCg==
-    - _data: 
-      _stringData: ZmFsDQo=
-    - _data: 
-      _stringData: ZmFscw0K
-    - _data: 
-      _stringData: ZmFsc2UNCg==
+    _serializedCustomData: []
 --- !u!137 &13734364
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
