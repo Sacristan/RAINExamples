@@ -13,6 +13,8 @@ labels:
 - Animation
 - Motion
 - RAIN
+timeCreated: 1466108773
+licenseType: Pro
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -26,6 +28,10 @@ PluginImporter:
       enabled: 0
       settings:
         DefaultValueInitialized: true
+    WindowsStoreApps:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
   userData: 
   assetBundleName: 
   assetBundleVariant: 
